@@ -1,0 +1,2 @@
+Motivace k tvorbě
+
