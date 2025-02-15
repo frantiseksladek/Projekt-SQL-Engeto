@@ -1,8 +1,7 @@
-
 CREATE OR REPLACE TABLE `t_frantisek_sladek_project_SQL_primary_final` AS
 SELECT 
     ROUND(AVG(cp.value), 2) AS avg_price,
-    YEAR(cp.date_from) AS year,
+    YEAR(cp.date_from) AS year_from,
     cpc.name AS price_category,
     cpc.price_value,
     cpc.price_unit,
@@ -30,7 +29,6 @@ GROUP BY
     cpib.name, 
     cpay.payroll_year;
 
-	
 -- propojeni czechia_price a czechia_price_category
 SELECT 
 	ROUND (AVG (cp.value), 2),
