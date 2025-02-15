@@ -10,8 +10,8 @@ SELECT
 	t.price_category,
 	t.price_value,
 	t.price_unit,
-	ROUND (
-	((t.avg_price - (
+	yl.max_year - yl.min_year AS year_difference,
+	(t.avg_price - (
         SELECT avg_price
         FROM t_frantisek_sladek_project_sql_primary_final
         WHERE price_category = t.price_category
@@ -21,9 +21,9 @@ SELECT
         SELECT avg_price
         FROM t_frantisek_sladek_project_sql_primary_final
         WHERE price_category = t.price_category
-          AND year_from = yl.min_year
+          AND year_from = t.year_from -1
         LIMIT 1
-    ) * 100) / (yl.max_year - yl.min_year) , 2) AS annual_percentage_growth
+    ) * 100 AS percentage_growth
 FROM t_frantisek_sladek_project_sql_primary_final AS t
 JOIN year_limits AS yl
 	ON t.year_from=yl.min_year OR t.year_from=yl.max_year
