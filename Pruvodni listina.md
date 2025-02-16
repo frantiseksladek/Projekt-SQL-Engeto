@@ -58,7 +58,6 @@ Pro odpověď na tuto otázku byla na datové výstupy z SQL aplikována funkce 
 
 Funkce **`=KORELACE()`** v Excelu vypočítá korelační koeficient mezi dvěma oblastmi dat.
 
-- **oblast1** a **oblast2**: Oblasti dat pro výpočet korelace.
 
 ### Výsledek:
 - **1**: Perfektní pozitivní korelace.
