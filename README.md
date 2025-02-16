@@ -1,6 +1,6 @@
 # Projekt SQL – Engeto
 
-**František Sládek, Datová akademie, zahájení 26. 9. 2024**
+**František Sládek, Datová akademie, zahájení 26. 9. 2024, Discord: frantiseksladek_**
 
 ## Motivace k tvorbě
 - Vlastní zájem o technologie datové analýzy
