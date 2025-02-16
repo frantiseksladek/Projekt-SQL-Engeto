@@ -33,5 +33,6 @@ JOIN  difference AS df
 GROUP BY t.price_category, t.year_from, t.avg_price, t.price_value, t.price_unit
 HAVING percentage_price_difference  IS NOT NULL 
 	AND percentage_wage_difference IS NOT NULL 
+	AND percentage_wage_difference != 0
 	AND (percentage_price_difference/percentage_wage_difference)>1.1;
 
