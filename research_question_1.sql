@@ -13,6 +13,7 @@ SELECT DISTINCT
                AND year_from = t.year_from - 1) 
    END AS avg_wages_difference   
 FROM t_frantisek_sladek_project_sql_primary_final AS t
-HAVING avg_wages_difference<0
+WHERE t.year_from BETWEEN 2007 AND 2018
+-- HAVING avg_wages_difference<0
 ORDER BY industry_category, year_from;
 
