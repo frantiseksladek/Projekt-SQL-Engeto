@@ -39,7 +39,7 @@ SELECT
 FROM czechia_price AS cp
 JOIN czechia_price_category AS cpc 
 	ON cp.category_code = cpc.code
-GROUP BY  category_code, YEAR (cp.date_from);
+GROUP BY category_code, YEAR (cp.date_from);
 
 -- propojeni czechia_payroll a czechia_payroll_industry
 SELECT 
