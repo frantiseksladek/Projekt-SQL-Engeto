@@ -16,7 +16,6 @@ SELECT
 FROM t_frantisek_sladek_project_sql_primary_final AS t
 JOIN year_limits AS yl
 	ON t.year_from=yl.min_year OR t.year_from=yl.max_year
-WHERE price_category LIKE '%Chléb%' OR 
-      price_category LIKE '%Mléko%'
+WHERE price_category IN ('Chléb', 'Mléko')
 GROUP BY price_category, year_from, t.avg_price, t.price_value, t.price_unit;
 
