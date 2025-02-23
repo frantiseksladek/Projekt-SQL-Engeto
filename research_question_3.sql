@@ -27,4 +27,10 @@ SELECT
 FROM t_frantisek_sladek_project_sql_primary_final AS t
 JOIN year_limits AS yl
 	ON t.year_from=yl.min_year OR t.year_from=yl.max_year
-GROUP BY price_category, year_from, t.avg_price, t.price_value, t.price_unit, yl.min_year,yl.max_year;
+GROUP BY price_category,
+	year_from, 
+	t.avg_price,
+	t.price_value,
+	t.price_unit, 
+	yl.min_year,
+	yl.max_year;
